@@ -4,6 +4,7 @@ import { ValidationResult as ValidationResultType, Risk } from '@/types'
 interface ValidationResultProps {
   result: ValidationResultType
   onReset: () => void
+  ideaText: string
 }
 
 const getRiskLevelColor = (level: string) => {
@@ -38,7 +39,7 @@ const RiskCard: React.FC<{ title: string; risks: Risk[] }> = ({ title, risks }) 
   </div>
 )
 
-const ValidationResult: React.FC<ValidationResultProps> = ({ result, onReset }) => {
+const ValidationResult: React.FC<ValidationResultProps> = ({ result, onReset, ideaText }) => {
   return (
     <div className="space-y-6">
 
